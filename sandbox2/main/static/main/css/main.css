@@ -1,0 +1,65 @@
+body{
+    padding: 0;
+    font-family: "Arial", sans-serif;
+    font-size: 14px;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+.topLine{
+    background: #DEF3FF;
+    height: 40px;
+    line-height: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.topLine: after {
+    vertical-align: middle;
+    text-align: right;
+}
+
+.topLineWords {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.logo {
+    margin-left: 40px;
+    font-size: 18px;
+}
+
+.name {
+    margin-right: 5px;
+}
+
+.iconSignOut {
+    font-size: 20px;
+    padding-right: 10px;
+    justify-content: flex-end;
+    flex-grow: 0;
+}
+
+.buttonLine div{
+    display: inline-block;
+    margin: 0 5px;
+    background: #E5E5E5;
+    border-radius: 5px;
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    line-height: 14px;
+}
+
+.buttonLine {
+    text-align: center;
+    margin: 20px;
+}
+
+.bottomLine {
+    height: 300px;
+    background: #C4C4C4;
+}
