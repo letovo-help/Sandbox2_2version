@@ -43,7 +43,7 @@ p {
     flex-grow: 0;
 }
 
-.buttonLine div{
+.buttonLine button{
     display: inline-block;
     margin: 0 5px;
     background: #E5E5E5;
@@ -52,6 +52,15 @@ p {
     padding-top: 5px;
     padding-bottom: 5px;
     line-height: 14px;
+    border-width: 0;
+}
+
+.buttonLine button:hover{
+    opacity: $btn-disabled-opacity;;
+}
+
+.buttonLine button:active {
+    background-color:red;
 }
 
 .buttonLine {
@@ -62,4 +71,33 @@ p {
 .bottomLine {
     height: 300px;
     background: #C4C4C4;
+}
+
+.search {
+    background: #E5E5E5;
+    color: #878787;
+    border-width: 0;
+    margin-left: 40px;
+    height: 35px;
+    border-radius: 5px;
+}
+
+.btn {
+    color: black;
+    background: #FFCC48;
+    border-width: 0;
+    margin-left: 12px;
+    height: 35px;
+    border-radius: 5px;
+    margin-top: 0;
+}
+
+.btn:hover {
+    opacity: 80%;
+}
+
+.searchLine .form-control{
+    display: inline-block;
+    width: 40%;
+    vertical-align: middle;
 }
