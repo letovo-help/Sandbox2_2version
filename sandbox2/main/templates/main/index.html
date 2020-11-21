@@ -1,8 +1,9 @@
 {% extends 'main/layout.html' %}
 
-{% block title%}Главная страница{% endblock %}
+{% load static %}
 
-{% block content %}
+{% block title%}Главная страница{% endblock %}
+{% block content%}
 <form class="searchLine">
       <input class="form-control search" type="text" placeholder="Поиск" aria-label="Поиск">
 <button class="btn" type="submit">Найти</button>

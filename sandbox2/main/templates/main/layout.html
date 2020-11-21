@@ -8,7 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{% static 'main/css/main.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/main.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/new_req.css'%}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 </head>
 <body>
@@ -26,9 +27,9 @@
         <button class="myRequests">
             <p>Мои запросы</p>
         </button>
-        <button class="createRequest">
+        <a href="{% url 'new request' %}"> <button class="createRequest">
             <p>Создать запрос</p>
-        </button>
+        </button></a>
     </div>
     <main>
         {% block content %}
