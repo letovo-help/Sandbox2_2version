@@ -12,30 +12,48 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 </head>
 <body>
-    <div class="topLine">
+    <header>
         <div class="topLineWords">
             <p class="logo">Letovo.Help</p>
             <p class="name">Student Name</p>
         </div>
         <div class="iconSignOut"><i class="fas fa-door-open signOut"></i></div>
-    </div>
-    <div class="buttonLine">
-        <button class="allRequests active">
-            <p>Все запросы</p>
-        </button>
-        <button class="myRequests">
-            <p>Мои запросы</p>
-        </button>
-        <button class="createRequest">
-            <p>Создать запрос</p>
-        </button>
-    </div>
+    </header>
+    <nav>
+        <button class="allRequests active">Все запросы</button>
+        <button class="myRequests">Мои запросы</button>
+        <button class="createRequest">Создать запрос</button>
+    </nav>
     <main>
         {% block content %}
         {% endblock %}
     </main>
-    <div class="bottomLine">
-        <p>Низ</p>
-    </div>
+    <footer>
+        <div class="column">
+            <p><strong>Компания</strong></p>
+            <ul>
+            <li><a href="">О нас</a></li>
+            <li><a href="">Правила</a></li>
+            <li><a href="">Контакты</a></li>
+            <li><a href="">Юридическая информация и политика конфиденциальности</a></li>
+            </ul>
+        </div>
+        <div class="column">
+            <p><strong>Помощь</strong></p>
+            <ul>
+            <li><a href="">Служба поддержки</a></li>
+            <li><a href="">Обратная связь</a></li>
+            <li><a href="">Личный кабинет</a></li>
+            </ul>
+        </div>
+        <div class="column">
+            <p><strong>Основные страницы</strong></p>
+            <ul>
+            <li><a href="">Все запросы</a></li>
+            <li><a href="">Мои запросы</a></li>
+            <li><a href="">Создать запрос</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>
