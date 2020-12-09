@@ -8,4 +8,4 @@ urlpatterns = [
     path('about', views.about, name='about us'),
     path('new_request', views.new_request, name='new request'),
     path('successful_new_request', views.successful_new_request, name='successful new request'),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]
