@@ -7,15 +7,18 @@
 
 
 {% block content %}
-    <p id="intro">Данные запроса</p>
+    <p id="intro">Данные запроса для редактирования</p>
     <form method="POST">
         {% csrf_token%}
         {{form.description}}
         {{form.title}}<br>
         {{form.additional_req}}<br>
+        <div class="form-control" id="cat">
+            {{form.categories}}
+        </div><br>
         {{form.how_to_connect}}<br>
         {{form.is_anonimous}}<span id="anon"> Анонимно</span><br>
-        <button id="send" class="btn btn-success" type="submit">Создать</button>
+        <button id="send" class="btn btn-success" type="submit">Подтвердить изменения</button>
 
     </form>
 

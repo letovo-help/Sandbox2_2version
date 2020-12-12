@@ -4,8 +4,23 @@ body{
     font-size: 14px;
 }
 
-p {
-    margin-bottom: 0;
+.card{
+    background: #DEF3FF;
+    margin: 2%;
+}
+.card span{
+    font-size: 16px;
+    float: right;
+    font-weight: bold;
+    position: relative;
+    top: 7px;
+}
+.card .btn{
+    position: relative;
+    left: -12px;
+}
+#edit{
+    float: right;
 }
 
 header{
@@ -91,7 +106,6 @@ footer {
 .searchLine .form-control{
     display: inline-block;
     width: 40%;
-    vertical-align: middle;
 }
 
 footer {
@@ -106,18 +120,42 @@ footer {
     margin-right: 5%;
 }
 
-ul {
+footer ul{
     display: block;
     list-style: none;
     padding-inline-start: 0;
 }
 
-li {
+footer li{
     display: list-item;
     margin-top: 5%;
     margin-bottom: 5%;
 }
 
-li a {
+footer li a{
     color: black;
+}
+
+.active_star{
+    position: relative;
+    top: -10px;
+    color: #ffd800;
+    padding: 0;
+    font-size: 35px;
+}
+.inactive_star{
+    position: relative;
+    top: -10px;
+    color: #C4C4C4;
+    padding: 0;
+    font-size: 35px;
+}
+
+.rating_1{
+    display: inline-block;
+    width: 30%;
+}
+.rating_2{
+    display: inline-block;
+    width: 30%;
 }

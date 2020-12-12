@@ -1,0 +1,17 @@
+{% extends 'main/layout.html' %}
+
+{% load static %}
+{% block links%}<link rel="stylesheet" type="text/css" href="{% static 'main/css/css_for_txt.css'%}"> {% endblock%}
+
+
+{% block title%}{{ request.title }}{% endblock %}
+{% block content%}
+<div class="card">
+      <div class="card-body">
+            <h3 class="card-title">{{ request.title }}</h3>
+            <p class="card-text">{{request.description}}</p>
+            <p>{{request.additional_req}}</p>
+            <p>{{request.how_to_connect}}</p>
+      </div>
+</div>
+{% endblock %}

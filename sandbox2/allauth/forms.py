@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 #from .models import Order
 from django.forms import TextInput
 
-import account.forms
+#import account.forms
 
 """class SignupForm(account.forms.SignupForm):
 
