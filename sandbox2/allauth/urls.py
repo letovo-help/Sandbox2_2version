@@ -3,13 +3,13 @@ from django.conf.urls import url
 from django.conf.urls.static import static
 from django.urls import path, include
 from . import views
-from account.views import PasswordResetTokenView
+#from account.views import PasswordResetTokenView
 
 urlpatterns = [
     path('login', views.loginPage, name='login page'),
     path('register', views.register, name='register page'),
     path('logout', views.logoutUser, name='logout'),
-    url(r"^account/", include("account.urls")),
+    #url(r"^account/", include("account.urls")),
 ]
 
 """urlpatterns = [
