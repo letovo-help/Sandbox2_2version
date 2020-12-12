@@ -142,17 +142,19 @@ STATICFILES_DIRS = [
 
 SITE_ID = 2
 
-ACCOUNT_EMAIL_UNIQUE = True
+"""ACCOUNT_EMAIL_UNIQUE = True
 ACCOUNT_EMAIL_CONFIRMATION_REQUIRED = True
 ACCOUNT_LOGIN_URL = 'allauth:account_login'
 ACCOUNT_EMAIL_CONFIRMATION_ANONYMOUS_REDIRECT_URL = ACCOUNT_LOGIN_URL
 ACCOUNT_PASSWORD_RESET_REDIRECT_URL = ACCOUNT_LOGIN_URL
 ACCOUNT_EMAIL_CONFIRMATION_URL = "allauth:account_confirm_email"
 ACCOUNT_SETTINGS_REDIRECT_URL = 'allauth:account_settings'
-ACCOUNT_PASSWORD_CHANGE_REDIRECT_URL = "allauth:account_password"
+ACCOUNT_PASSWORD_CHANGE_REDIRECT_URL = "allauth:account_password"""
 
-DEFAULT_FROM_EMAIL = 'support@yoursite.ru'
-EMAIL_HOST = "smtp.yoursmtpserver.ru"
-EMAIL_PORT = 25
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+DEFAULT_FROM_EMAIL = 'support@letovohelp.ru'
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 0
+EMAIL_USE_TLS = True
 EMAIL_HOST_USER = "user"
 EMAIL_HOST_PASSWORD = "pass"
