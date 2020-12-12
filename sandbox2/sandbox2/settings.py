@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -38,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'allauth',
+    'account',
+    'django.contrib.sites',
 ]
 
 MIDDLEWARE = [
@@ -48,6 +50,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+MIDDLEWARE_CLASSES = [
+    'account.middleware.LocaleMiddleware',
+    'account.middleware.TimezoneMiddleware'
 ]
 
 ROOT_URLCONF = 'sandbox2.urls'
@@ -63,6 +70,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'account.context_processors.account',
             ],
         },
     },
@@ -81,7 +89,14 @@ DATABASES = {
     }
 }
 
-
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'account.auth_backends.EmailAuthenticationBackend',
+)
+#AUTHENTICATION_BACKENDS = (
+#    'django.contrib.auth.backends.ModelBackend',
+#    'allauth.accounts.auth_backends.AuthenticationBackend',
+#)
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
@@ -124,3 +139,20 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
     '/var/www/static/',
 ]
+
+SITE_ID = 2
+
+ACCOUNT_EMAIL_UNIQUE = True
+ACCOUNT_EMAIL_CONFIRMATION_REQUIRED = True
+ACCOUNT_LOGIN_URL = 'allauth:account_login'
+ACCOUNT_EMAIL_CONFIRMATION_ANONYMOUS_REDIRECT_URL = ACCOUNT_LOGIN_URL
+ACCOUNT_PASSWORD_RESET_REDIRECT_URL = ACCOUNT_LOGIN_URL
+ACCOUNT_EMAIL_CONFIRMATION_URL = "allauth:account_confirm_email"
+ACCOUNT_SETTINGS_REDIRECT_URL = 'allauth:account_settings'
+ACCOUNT_PASSWORD_CHANGE_REDIRECT_URL = "allauth:account_password"
+
+DEFAULT_FROM_EMAIL = 'support@yoursite.ru'
+EMAIL_HOST = "smtp.yoursmtpserver.ru"
+EMAIL_PORT = 25
+EMAIL_HOST_USER = "user"
+EMAIL_HOST_PASSWORD = "pass"

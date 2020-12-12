@@ -16,7 +16,7 @@
     <header>
         <div class="topLineWords">
             <p class="logo">Letovo.Help</p>
-            <a href=""> <p class="name">Student Name</p> </a>
+            <p class="name"><a href="{% url 'logout' %}">{{request.user}}</a></p>
         </div>
         <div class="iconSignOut"><i class="fas fa-door-open signOut"></i></div>
 
@@ -26,6 +26,7 @@
         <a href="{% url 'my requests' %}"><button class="myRequests">Мои запросы</button></a>
         <a href="{% url 'new request' %}"><button class="createRequest">Создать запрос</button></a>
         <a href="{% url 'personal account' %}"><button class="personalAccount">Личный кабинет</button></a>
+
     </nav>
 
     <main>
