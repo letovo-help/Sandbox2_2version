@@ -1,0 +1,13 @@
+{% extends 'main/layout.html' %}
+
+{% block title%}Feedback{% endblock %}
+{% load static %}
+{% block links%}<link rel="stylesheet" type="text/css" href="{% static 'main/css/css_for_txt.css'%}"> {% endblock%}
+
+{% block content %}
+<h4>Вы можете написать свой отзыв о нашем сервисе здесь</h4>
+<form class="question">
+      <input class="form-control" type="text" placeholder="Отзыв" aria-label="Вопрос">
+<button class="btn" type="submit">Отправить</button>
+</form>
+{% endblock %}

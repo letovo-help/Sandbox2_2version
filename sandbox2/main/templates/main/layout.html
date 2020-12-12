@@ -9,22 +9,23 @@
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="{% static 'main/css/main.css'%}">
-    <link rel="stylesheet" type="text/css" href="{% static 'main/css/new_req.css'%}">
+    <link>{% block links%} {% endblock%}
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 </head>
 <body>
     <header>
         <div class="topLineWords">
             <p class="logo">Letovo.Help</p>
-            <p class="name">Student Name</p>
+            <a href=""> <p class="name">Student Name</p> </a>
         </div>
         <div class="iconSignOut"><i class="fas fa-door-open signOut"></i></div>
 
     </header>
     <nav>
-        <button class="allRequests active">Все запросы</button>
-        <button class="myRequests">Мои запросы</button>
-        <a href="{% url 'new request' %}"></a><button class="createRequest">Создать запрос</button>
+        <a href="{% url 'all requests' %}"><button class="allRequests active">Все запросы</button></a>
+        <a href="{% url 'my requests' %}"><button class="myRequests">Мои запросы</button></a>
+        <a href="{% url 'new request' %}"><button class="createRequest">Создать запрос</button></a>
+        <a href="{% url 'personal account' %}"><button class="personalAccount">Личный кабинет</button></a>
     </nav>
 
     <main>
@@ -35,26 +36,26 @@
         <div class="column">
             <p><strong>Компания</strong></p>
             <ul>
-            <li><a href="">О нас</a></li>
-            <li><a href="">Правила</a></li>
-            <li><a href="">Контакты</a></li>
-            <li><a href="">Юридическая информация и политика конфиденциальности</a></li>
+            <li><a href="{% url 'about us' %}">О нас</a></li>
+            <li><a href="{% url 'rules' %}">Правила</a></li>
+            <li><a href="{% url 'contacts' %}">Контакты</a></li>
+            <li><a href="{% url 'ofc info' %}">Юридическая информация и политика конфиденциальности</a></li>
             </ul>
         </div>
         <div class="column">
             <p><strong>Помощь</strong></p>
             <ul>
-            <li><a href="">Служба поддержки</a></li>
-            <li><a href="">Обратная связь</a></li>
-            <li><a href="">Личный кабинет</a></li>
+            <li><a href="{% url 'help' %}">Служба поддержки</a></li>
+            <li><a href="{% url 'feedback' %}">Обратная связь</a></li>
+            <li><a href="{% url 'personal account' %}">Личный кабинет</a></li>
             </ul>
         </div>
         <div class="column">
             <p><strong>Основные страницы</strong></p>
             <ul>
-            <li><a href="">Все запросы</a></li>
-            <li><a href="">Мои запросы</a></li>
-            <li><a href="">Создать запрос</a></li>
+            <li><a href="{% url 'all requests' %}">Все запросы</a></li>
+            <li><a href="{% url 'my requests' %}">Мои запросы</a></li>
+            <li><a href="{% url 'new request' %}">Создать запрос</a></li>
             </ul>
         </div>
     </footer>

@@ -1,0 +1,32 @@
+{% extends 'main/layout.html' %}
+
+{% block title%}Personal account{% endblock %}
+{% load static %}
+{% block links%}<link rel="stylesheet" type="text/css" href="{% static 'main/css/css_for_txt.css'%}">
+{% endblock%}
+
+{% block content %}
+<div class="rating_1">
+<h5>Рейтинг исполнителя: {{d}} из 5</h5>
+    {%for i in do%}
+    {%if i == 1%}
+        <span class="active_star">&#9733;</span>
+    {%else%}
+        <span class="inactive_star">&#9733;</span>
+    {%endif%}
+    {%endfor -%}
+</div>
+<div class="rating_2">
+<h5>Рейтинг заказчика: {{o}} из 5</h5>
+    {%for i in order%}
+    {%if i == 1%}
+        <span class="active_star">&#9733;</span>
+    {%else%}
+        <span class="inactive_star">&#9733;</span>
+    {%endif%}
+    {%endfor -%}
+</div>
+<h1>This page contains information</h1>
+<p>About personal account</p>
+<p>Страница находится в разработке</p>
+{% endblock %}

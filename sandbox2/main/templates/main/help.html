@@ -1,0 +1,15 @@
+{% extends 'main/layout.html' %}
+
+{% block title%}Help{% endblock %}
+{% load static %}
+{% block links%}<link rel="stylesheet" type="text/css" href="{% static 'main/css/css_for_txt.css'%}"> {% endblock%}
+
+{% block content %}
+<h4>Вы можете задать любой вопрос здесь</h4>
+<form class="question">
+      <input class="form-control" type="text" placeholder="Вопрос" aria-label="Вопрос">
+<button class="btn" type="submit">Задать вопрос</button>
+</form>
+<h4>Или связаться с нами по почте:</h4>
+<p>letovohelp_project@letovo.ru</p>
+{% endblock %}

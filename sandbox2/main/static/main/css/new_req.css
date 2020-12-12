@@ -7,6 +7,20 @@
     border-radius: 5px;
     width: 40%;
 }
+input:valid{
+    background: white;
+    border: 2px solid #878787;
+    color: black;
+}
+textarea:valid{
+    background: white;
+    border: 2px solid #878787;
+    color: black;
+}
+#cat{
+ height: 120px;
+    width: 120px;
+}
 #myonoffswitch{
     height: 20px;
     width: 20px;
